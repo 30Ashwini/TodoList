@@ -3,11 +3,6 @@ const tasksList = document.getElementById('list');
 const addTaskInput = document.getElementById('add');
 const tasksCounter = document.getElementById('tasks-counter');
 
-console.log('Working');
-
-
-
-
 function addTaskToDOM(task)
 {
 	const li=document.createElement('li');
@@ -15,11 +10,7 @@ function addTaskToDOM(task)
 	li.innerHTML = `
 	<input type="checkbox" id="${task.id}" ${task.completed ? 'checked' : ''} class="custom-checkbox">
 	<label for="${task.id}"> ${task.title} </label>
-	<img src="download.jpg"  class="delete" data-id="${task.id}" />`;
-	
-	
-
-
+	<img src="http://127.0.0.1:5500/download.jpg"  class="delete" data-id="${task.id}" />`;
 	tasksList.append(li);
 
 }
